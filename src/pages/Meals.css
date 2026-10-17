@@ -1,0 +1,139 @@
+
+.meals-page {
+  width: min(1100px, 88%);
+  margin: 0 auto;
+}
+
+.page-heading {
+  padding: 45px 0 20px;
+  text-align: center;
+}
+
+.page-heading h1 {
+  margin-bottom: 10px;
+  font-size: clamp(30px, 4vw, 42px);
+}
+
+.page-heading > p:last-child {
+  color: #72756e;
+  line-height: 1.7;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  max-width: 650px;
+  margin: 15px auto 35px;
+}
+
+.search-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #dcded7;
+  border-radius: 8px;
+  background: white;
+  outline: none;
+}
+
+.search-form input:focus {
+  border-color: #39734b;
+  box-shadow: 0 0 0 3px #39734b20;
+}
+
+.search-form button {
+  border: none;
+  border-radius: 8px;
+  padding: 13px 22px;
+  background: #39734b;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background: #285b39;
+}
+
+.status-message {
+  padding: 25px 0;
+  text-align: center;
+  color: #62665f;
+  line-height: 1.7;
+}
+
+.error {
+  color: #b42318;
+}
+
+.meal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  padding-bottom: 60px;
+}
+
+.meal-card {
+  overflow: hidden;
+  border: 1px solid #eeece5;
+  border-radius: 14px;
+  background: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.meal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px #0000000d;
+}
+
+.meal-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.meal-card-content {
+  padding: 17px;
+}
+
+.meal-card-content h2 {
+  margin: 0 0 10px;
+  font-size: 19px;
+}
+
+.meal-card-content p {
+  color: #777b73;
+  font-size: 14px;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #39734b;
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .meal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .meals-page {
+    width: 90%;
+  }
+
+  .meal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-form button {
+    width: 100%;
+  }
+}

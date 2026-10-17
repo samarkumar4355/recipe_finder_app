@@ -1,0 +1,46 @@
+
+.navbar {
+  min-height: 72px;
+  padding: 16px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #ecebe5;
+}
+
+.brand {
+  font-size: 23px;
+  font-weight: 800;
+  color: #39734b;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #39734b;
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    padding: 15px 5%;
+  }
+
+  .brand {
+    font-size: 19px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 14px;
+  }
+}
